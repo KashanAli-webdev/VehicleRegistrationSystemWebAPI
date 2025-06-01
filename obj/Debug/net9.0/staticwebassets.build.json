@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "LEAI4YdCggtnlVYDXc11zuvU6x09awMpcAeg5O+zn9Y=",
+  "Source": "VehicleRegistrationSystemWebAPI",
+  "BasePath": "_content/VehicleRegistrationSystemWebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

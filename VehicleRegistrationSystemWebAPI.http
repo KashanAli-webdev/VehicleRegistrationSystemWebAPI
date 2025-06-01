@@ -1,0 +1,53 @@
+@VehicleRegistrationSystemWebAPI_HostAddress = http://localhost:5217
+
+### Get Vehicles
+GET {{VehicleRegistrationSystemWebAPI_HostAddress}}/api/vehicles
+Accept: application/json
+
+### Get Vehicle by ID
+GET {{VehicleRegistrationSystemWebAPI_HostAddress}}/api/vehicles/add8575d-6db4-48e0-a972-197b3df753f9
+Accept: application/json
+
+### Create a new vehicle
+POST {{VehicleRegistrationSystemWebAPI_HostAddress}}/api/vehicles
+Content-Type: application/json
+{
+  "Brand": "Nisan",
+  "Model": "Petrol",
+  "Color": "Orange",
+  "Type": 3,
+  "Year": 2005,
+  "EngineCC": 5000,
+  "registration": {
+      "plateNumber": "N/D",
+      "issueDate": "2025-05-31",
+      "registrationCity": "N/D",
+      "ownerName": "N/D",
+      "ownerCNIC": "N/D"
+    }
+}
+
+### Update an existing vehicle
+PUT {{VehicleRegistrationSystemWebAPI_HostAddress}}/api/vehicles/5996531b-c037-4f9d-ba7d-9de8f6fa438c
+Content-Type: application/json
+{
+    "id": "5996531b-c037-4f9d-ba7d-9de8f6fa438c",
+    "brand": "Kia",
+    "model": "Stonic",
+    "color": "Skyblue",
+    "type": 2,
+    "year": 2020,
+    "engineCC": 1400,
+    "registration": {
+      "vehicleId": "5996531b-c037-4f9d-ba7d-9de8f6fa438c",
+      "plateNumber": "AAA-3333",
+      "issueDate": "2021-03-08",
+      "registrationCity": "Rawalpindi",
+      "ownerName": "Tahreem Zaidi",
+      "ownerCNIC": "N/D"
+    }
+}
+
+### Delete a vehicle
+DELETE {{VehicleRegistrationSystemWebAPI_HostAddress}}/api/vehicles/5d8d9156-e0c1-4492-b6a7-365c73baebd5
+Accept: application/json
