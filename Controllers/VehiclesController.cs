@@ -48,11 +48,12 @@ namespace VehicleRegistrationSystemWebAPI.Controllers
         [HttpPost] // POST: api/Vehicle
         public async Task<IActionResult> CreateVehicle(Vehicle vehicle)
         {
+            vehicle.Id = Guid.NewGuid();
+            vehicle.Registration.VehicleId = vehicle.Id;
+
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            vehicle.Id = Guid.NewGuid();
-            vehicle.Registration.VehicleId = vehicle.Id; // Ensure VehicleId is set for both entities
             _context.Vehicles.Add(vehicle);
             await _context.SaveChangesAsync();
             return Ok(vehicle);
